@@ -5,8 +5,8 @@ EQUIPE:
  - Leonardo Vinícius
  - Lívia Soares
  - Lucas Barros
- - Pedro Mesquita
- - Ruth Ingrid
+ - Pedro Mesquita Isidoro
+ - Ruthe Ingryd
  
  Este é o trabalho final da disciplina Matemática Doscreta dos cursos de Engenharia de computação e Ciência da computação na Universidade Fedral de Alagoas.
  

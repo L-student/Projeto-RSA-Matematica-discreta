@@ -53,10 +53,10 @@ void encriptar(){
 	// Trata cada um dos caracteres e, depois de encriptados, os armazena no arquivo
 	for(int i=0 ; i<strlen(texto) ; i++){
 		if(texto[i] == ' '){
-			fprintf(mensagem, "%lld ", exponenciacao(28, e, n));
+			fprintf(mensagem, "%d ", exponenciacao(28, e, n));
 		}
 		else{
-			fprintf(mensagem, "%lld ", exponenciacao(texto[i]-63, e, n) );
+			fprintf(mensagem, "%d ", exponenciacao(texto[i]-63, e, n) );
 		}
 	}
 
@@ -80,15 +80,20 @@ void desencriptar(){
 	// Calcula o inverso de E
 	d = inverso(e, (p-1)*(q-1));
 
+	printf("O inverso eh: %lld\n", d);
+
 	// Lê os valores da mensagem encriptada, converte
 	// para a mensagem original e armazena-os em outro arquivo
 	while(fscanf(mensagem , "%lld" , &cifrada) != EOF){
 		original = exponenciacao(cifrada, d, (p*q));
+		//printf("original: %d\n", original+63);
 		if(original == 28){
 			fprintf(desencriptada, "%c", ' ');
+			printf(" ");
 		}
 		else{
 			fprintf(desencriptada, "%c", original+63);
+			printf("%c", original+63);
 		}
 	}
 	// Fecha os arquivos
